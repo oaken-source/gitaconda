@@ -1,0 +1,9 @@
+
+# python generated files
+*.pyc
+
+# setup.py generated files
+.eggs/
+*.egg-info/
+build/
+dist/
