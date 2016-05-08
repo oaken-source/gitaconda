@@ -1,0 +1,8 @@
+
+<metal:macro use-macro="base">
+  <metal:slot fill-slot="title">Your Code, Your Freedom</metal:slot>
+
+  <metal:slot fill-slot="body">
+    <h1>hello world</h1>
+  </metal:slot>
+</metal:macro>

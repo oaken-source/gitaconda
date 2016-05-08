@@ -29,6 +29,8 @@ setup(
         'pyramid',
         'pyramid_chameleon',
         'pyramid_beaker',
+        'pyramid_tm',
+        'pyramid_sqlalchemy',
     ],
 
     license='GPLv3+',

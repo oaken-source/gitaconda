@@ -7,6 +7,13 @@ from gitaconda_server import main
 
 
 @pytest.fixture(scope='session')
+def pyramid_settings():
+    return {
+        'sqlalchemy.url': 'sqlite://',
+    }
+
+
+@pytest.fixture(scope='session')
 def pyramid_testing_setup(request):
     def fin():
         testing.tearDown()
@@ -14,6 +21,6 @@ def pyramid_testing_setup(request):
     return testing.setUp()
 
 
-@pytest.fixture(scope='session')
-def pyramid_server(pyramid_testing_setup):
-    return TestApp(main({}))
+@pytest.fixture(scope='module')
+def pyramid_server(pyramid_testing_setup, pyramid_settings):
+    return TestApp(main({}, **pyramid_settings))
