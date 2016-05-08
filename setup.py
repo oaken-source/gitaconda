@@ -27,6 +27,8 @@ setup(
     install_requires=[
         # gitaconda-server
         'pyramid',
+        'pyramid_chameleon',
+        'pyramid_beaker',
     ],
 
     license='GPLv3+',
