@@ -7,8 +7,10 @@ from pyramid.events import subscriber
 
 @subscriber(IBeforeRender)
 def globals_factory(event):
-    base = get_renderer('gitaconda_server:templates/base.pt').implementation()
-    event['base'] = base
+    event['master'] = get_renderer('gitaconda_server:templates/master.pt').implementation()
+    event['base_anon'] = get_renderer('gitaconda_server:templates/base_anon.pt').implementation()
+    event['base_auth'] = get_renderer('gitaconda_server:templates/base_auth.pt').implementation()
+
 
 
 @view_config(route_name='index', renderer='gitaconda_server:templates/index.pt')

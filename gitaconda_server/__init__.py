@@ -13,10 +13,15 @@ def main(global_config, **settings):
     config.include('pyramid_tm')
     config.include('pyramid_sqlalchemy')
 
+    # anon routes
     config.add_route('index', '/')
     config.add_route('signin', '/signin')
     config.add_route('signup', '/signup')
     config.add_route('search', '/search')
+
+    # auth'd routes
+    config.add_route('pullrequests', '/pullrequests')
+    config.add_route('issues', '/issues')
 
     config.add_static_view(name='static', path='gitaconda_server:static')
     config.scan('.views')
