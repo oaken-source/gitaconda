@@ -14,6 +14,9 @@ def main(global_config, **settings):
     config.include('pyramid_sqlalchemy')
 
     config.add_route('index', '/')
+    config.add_route('signin', '/signin')
+    config.add_route('signup', '/signup')
+    config.add_route('search', '/search')
 
     config.add_static_view(name='static', path='gitaconda_server:static')
     config.scan('.views')

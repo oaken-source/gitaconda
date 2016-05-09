@@ -37,12 +37,20 @@
   }
 }
 
+body {
+  padding-top: 60px;
+}
+
 .hidden-lg .navbar-btn {
   margin-left: 20px;
   margin-right: 20px;
 }
 
-.navbar-btn a.btn {
+.navbar-btn {
+  overflow: auto;
+}
+
+.hidden-lg .navbar-btn a.btn {
   margin-left: 4px;
   float: left;
   width: calc(50% - 6px);
@@ -58,11 +66,15 @@
 }
 
 #navbar {
-  font-size: 1.5em;
+  font-size: 1.3em;
+}
+
+#navbar input {
+  width: 400px;
 }
 
 .navbar-horizontal a {
-  font-size: 0.7em;
+  font-size: 0.8em;
   padding-right: 5px !important;
   padding-left: 5px !important;
   display: inline-flex !important;
